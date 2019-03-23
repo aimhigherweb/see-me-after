@@ -1,0 +1,53 @@
+@import '../variables.scss';
+
+footer {
+    background: #fff;
+    background: rgba(#fff, 0.5);
+    display: flex;
+        justify-content: flex-end;
+    font-size: 15px;
+    height: auto;
+        min-height: $height_footer;
+    padding: 10px;
+    position: relative;
+        bottom: 0;
+    text-align: right;
+    width: 100vw;
+    z-index: 5;
+
+    .icons {
+        display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+        margin-top: 20px;
+ 
+        svg {
+            color: rgba($primary, 0.5);
+            height: 30px;
+            max-height: 40px;
+            width: auto;
+
+            &:active, &:hover, &:focus {
+                color: $primary;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+            font-size: 1em;
+            padding: 5vh 0;
+
+        .icons {
+            width: 30%;
+
+            svg {
+                height: 5vh;
+            }
+        }
+
+
+    }
+}
