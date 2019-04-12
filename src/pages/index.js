@@ -6,10 +6,8 @@ import Layout from '../components/layout'
 
 export default class IndexPage extends React.Component {
     render() {
-        const { data } = this.props
-        const { edges: posts } = data.allMarkdownRemark
-
-        const meta = {
+        const { data } = this.props,
+         meta = {
             name: data.site.siteMetadata.title,
             description: data.site.siteMetadata.description,
             slug: data.site.siteMetadata.siteUrl,
@@ -17,7 +15,8 @@ export default class IndexPage extends React.Component {
 
         return (
             <Layout meta={meta}>
-               <h1>See Me After</h1>            </Layout>
+               <h1>See Me After</h1> 
+               <p>Hello World</p>           </Layout>
         )
     }
 }

@@ -6,7 +6,7 @@ import Header from './header'
 import Footer from './footer'
 
 import Logo from '../img/logo.jpg'
-import Favicon from '../img/favicon.png'
+// import Favicon from '../img/favicon.png'
 
 const Layout = ({ children, meta }) => (
 	<StaticQuery
@@ -22,35 +22,33 @@ const Layout = ({ children, meta }) => (
 			}
 		`}
 		render={data => {
-			let defaultMeta = data.allWordpressSiteMetadata.edges[0].node
+			// let defaultMeta = data.allWordpressSiteMetadata.edges[0].node
 
-			if (!meta) {
-				meta = {
-					name: defaultMeta.name,
-					description: defaultMeta.description,
-					siteUrl: defaultMeta.url,
-				}
-			} else {
-				meta = {
-					name: meta.name,
-					description: meta.description,
-					slug: meta.slug,
-					image: meta.image,
-					siteUrl: defaultMeta.url,
-					fallback: {
-						name: defaultMeta.name,
-						description: defaultMeta.description,
-					},
-				}
-			}
+			// if (!meta) {
+			// 	meta = {
+			// 		name: defaultMeta.name,
+			// 		description: defaultMeta.description,
+			// 		siteUrl: defaultMeta.url,
+			// 	}
+			// } else {
+			// 	meta = {
+			// 		name: meta.name,
+			// 		description: meta.description,
+			// 		slug: meta.slug,
+			// 		image: meta.image,
+			// 		siteUrl: defaultMeta.url,
+			// 		fallback: {
+			// 			name: defaultMeta.name,
+			// 			description: defaultMeta.description,
+			// 		},
+			// 	}
+			// }
 
 			return (
 				<Fragment>
-					<Meta {...meta} />
+					{/* <Meta {...meta} /> */}
 					{<Header />}
-					<main id="main" itemtype={itemtype}>
-						{children}
-					</main>
+					<main id="main">{children}</main>
 					{<Footer />}
 				</Fragment>
 			)

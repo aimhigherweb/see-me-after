@@ -10,7 +10,8 @@
 		"start": "npm run develop",
 		"develop": "gatsby develop --https",
 		"build": "gatsby build",
-		"serve": "gatsby serve"
+		"build:fab": "npm run build && npm run fab:compile",
+		"fab:compile": "fab-static public"
 	},
 	"engines": {
 		"node": "11.9.0"
