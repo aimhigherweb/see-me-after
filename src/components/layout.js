@@ -6,7 +6,10 @@ import Header from './header'
 import Footer from './footer'
 
 import Logo from '../img/logo.jpg'
-// import Favicon from '../img/favicon.png'
+import Favicon from '../img/favicon.png'
+
+import '../scss/global.scss'
+import '../scss/content.scss'
 
 const Layout = ({ children, meta }) => (
 	<StaticQuery
@@ -22,31 +25,14 @@ const Layout = ({ children, meta }) => (
 			}
 		`}
 		render={data => {
-			// let defaultMeta = data.allWordpressSiteMetadata.edges[0].node
-
-			// if (!meta) {
-			// 	meta = {
-			// 		name: defaultMeta.name,
-			// 		description: defaultMeta.description,
-			// 		siteUrl: defaultMeta.url,
-			// 	}
-			// } else {
-			// 	meta = {
-			// 		name: meta.name,
-			// 		description: meta.description,
-			// 		slug: meta.slug,
-			// 		image: meta.image,
-			// 		siteUrl: defaultMeta.url,
-			// 		fallback: {
-			// 			name: defaultMeta.name,
-			// 			description: defaultMeta.description,
-			// 		},
-			// 	}
-			// }
+			let site = data.site.siteMetadata
+			meta.title = site.title
+			meta.siteUrl = site.siteUrl
+			meta.description = meta.description ? meta.description : site.description
 
 			return (
 				<Fragment>
-					{/* <Meta {...meta} /> */}
+					<Meta {...meta} />
 					{<Header />}
 					<main id="main">{children}</main>
 					{<Footer />}
@@ -56,21 +42,11 @@ const Layout = ({ children, meta }) => (
 	/>
 )
 
-const Meta = ({ name, description, slug, image, siteUrl, fallback }) => {
-	if (!image) {
-		image = Logo
-	}
-	if (!name) {
-		name = fallback.name
-	} else if (name && fallback) {
-		name = name + ' | ' + fallback.name
-	}
-	if (!description) {
-		description = fallback.description
-	}
-	if (!slug) {
-		slug = '/'
-	}
+// eslint-disable-next-line one-var
+const Meta = ({ name, title, description, slug, siteUrl, image }) => {
+	slug = !slug && '/'
+	image = !image && Logo
+	title = name ? `${name} | ${title}` : title
 
 	return (
 		<Helmet>

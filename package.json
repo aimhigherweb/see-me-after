@@ -41,9 +41,12 @@
 		"node-sass": "^4.11.0",
 		"prettier": "^1.15.3",
 		"react": "^16.4.2",
+		"react-async-script": "^1.0.1",
 		"react-dom": "^16.4.2",
 		"react-feather": "^1.1.5",
-		"react-helmet": "^5.2.0"
+		"react-google-recaptcha": "^1.0.5",
+		"react-helmet": "^5.2.0",
+		"recompose": "^0.30.0"
 	},
 	"devDependencies": {
 		"@fab/static": "^0.1.4"

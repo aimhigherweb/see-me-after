@@ -1,3 +1,7 @@
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
 	siteMetadata: {
 		title: 'See Me After',
@@ -9,13 +13,13 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-react-svg',
 			options: {
-				include: `${__dirname}/src/img`,
+				include: `./src/img`,
 			},
 		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				path: `${__dirname}/src/img`,
+				path: `./src/img`,
 				name: 'images',
 			},
 		},

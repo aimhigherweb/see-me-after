@@ -1,41 +1,41 @@
 //Fonts
-$font_regular: 400 1em 'Anonymous Pro', monospace;
-$font_bold: 700 1em 'Anonymous Pro', monospace;
-$font_headings: 700 1.5em 'Poppins', sans-serif;
+$font_regular: 400 1em 'Hypatia Sans Pro', serif;
+$font_bold: 700 1em 'Hypatia Sans Pro', serif;
+$font_headings: 700 1.5em 'Antic Didone', serif;
 
 //Colours
 $primary: #c10000;
-    $primary_light_10: #f9e6e6;
-    $primary_light_25: #f0bfbf;
-    $primary_light_50: #0f0e0e;
-    $primary_light_75: #d14040;
-    $primary_light_90: #c71919;
+$primary_light_10: #f9e6e6;
+$primary_light_25: #f0bfbf;
+$primary_light_50: #0f0e0e;
+$primary_light_75: #d14040;
+$primary_light_90: #c71919;
 
-    $primary_dark_10: #130000;
-    $primary_dark_25: #300000;
-    $primary_dark_50: #610000;
-    $primary_dark_75: #910000;
-    $primary_dark_90: #ae0000;
+$primary_dark_10: #130000;
+$primary_dark_25: #300000;
+$primary_dark_50: #610000;
+$primary_dark_75: #910000;
+$primary_dark_90: #ae0000;
 
 $secondary: #455560;
-    $secondary_light_10: #eceeef;
-    $secondary_light_25: #d1d5d7;
-    $secondary_light_50: #a2aab0;
-    $secondary_light_75: #748088;
-    $secondary_light_90: #586670;
+$secondary_light_10: #eceeef;
+$secondary_light_25: #d1d5d7;
+$secondary_light_50: #a2aab0;
+$secondary_light_75: #748088;
+$secondary_light_90: #586670;
 
-    $secondary_dark_10: #07090a;
-    $secondary_dark_25: #111518;
-    $secondary_dark_50: #232b30;
-    $secondary_dark_75: #344048;
-    $secondary_dark_90: #3e4d56;
+$secondary_dark_10: #07090a;
+$secondary_dark_25: #111518;
+$secondary_dark_50: #232b30;
+$secondary_dark_75: #344048;
+$secondary_dark_90: #3e4d56;
 
 $neutral: #000000;
-    $neutral_light_10: #e6e6e6;
-    $neutral_light_25: #bfbfbf;
-    $neutral_light_50: #808080;
-    $neutral_light_75: #404040;
-    $neutral_light_90: #191919;
+$neutral_light_10: #e6e6e6;
+$neutral_light_25: #bfbfbf;
+$neutral_light_50: #808080;
+$neutral_light_75: #404040;
+$neutral_light_90: #191919;
 
 // Variables
 $height_header: 14vh;
