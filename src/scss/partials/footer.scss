@@ -1,53 +1,74 @@
 @import '../variables.scss';
 
 footer {
-    background: #fff;
-    background: rgba(#fff, 0.5);
-    display: flex;
-        justify-content: flex-end;
-    font-size: 15px;
-    height: auto;
-        min-height: $height_footer;
-    padding: 10px;
-    position: relative;
-        bottom: 0;
-    text-align: right;
-    width: 100vw;
-    z-index: 5;
+	border-top: 2px solid $primary_dark_75;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 15px;
+	height: auto;
+	min-height: $height_footer;
+	padding: 10px;
+	position: relative;
+	bottom: 0;
+	text-align: right;
+	width: 100vw;
+	z-index: 5;
 
-    .icons {
-        display: flex;
-            align-items: center;
-            flex-direction: row;
-            justify-content: space-around;
-        margin-top: 20px;
- 
-        svg {
-            color: rgba($primary, 0.5);
-            height: 30px;
-            max-height: 40px;
-            width: auto;
+	.icons {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-around;
 
-            &:active, &:hover, &:focus {
-                color: $primary;
-            }
-        }
-    }
-}
+		svg {
+			border: 3px solid transparent;
+			color: rgba($primary, 0.5);
+			height: 50px;
+			padding: 10px;
+			width: auto;
 
-@media screen and (min-width: 768px) {
-    footer {
-            font-size: 1em;
-            padding: 5vh 0;
+			&:active,
+			&:hover,
+			&:focus {
+				color: $primary;
+				border-color: $primary;
+			}
+		}
+	}
 
-        .icons {
-            width: 30%;
+	nav {
+		display: flex;
+		justify-content: center;
+		text-align: center;
 
-            svg {
-                height: 5vh;
-            }
-        }
+		span {
+			font-size: 0;
+		}
 
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
 
-    }
+	.aimhigher {
+		--secondary: #{$primary};
+		--primary: #{$primary};
+		margin-right: 20px;
+
+		svg {
+			max-width: 200px;
+		}
+	}
+
+	a {
+		&:active,
+		&:hover,
+		&:focus {
+			--secondary: #16a6b1;
+			--primary: #1c75bc;
+		}
+	}
 }

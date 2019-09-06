@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Contact from '../components/contact'
 
-// import '../scss/layouts/home.scss';
+import { testimonials } from '../data/testimonials'
 
 export default class IndexPage extends React.Component {
 	render() {
@@ -17,30 +17,24 @@ export default class IndexPage extends React.Component {
 
 		return (
 			<Layout meta={meta}>
-				<Img fixed={data.file.childImageSharp.fixed} />
-				<h2>About Mandy</h2>
-				<p>Mandy writes books and does stuff. She also likes to correct people's grammar</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-					penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-				</p>
-				<p>
-					In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-					Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
-					eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-				</p>
-
-				<p>
-					Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-					ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
-					sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et
-					ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus
-					tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales,
-					augue velit cursus nunc,
-				</p>
+				<div className="align">
+					<Img fixed={data.file.childImageSharp.fixed} />
+					<div>
+						<h2>About</h2>
+						<p>See Me After specialises in creating and editing content that still maintains your voice.</p>
+					</div>
+				</div>
+				<div className="testimonials">
+					<h2 className="left">Testimonial</h2>
+					<blockquote className="testimonial">
+						{testimonials[0].testimonial}
+						<cite>
+							{testimonials[0].name} - {testimonials[0].company}
+						</cite>
+					</blockquote>
+				</div>
 				<div className="contact">
-					<h2>Contact</h2>
+					<h2 className="right">Contact</h2>
 					<Contact />
 				</div>
 			</Layout>
