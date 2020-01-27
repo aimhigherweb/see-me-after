@@ -170,6 +170,9 @@ form {
 
 	input,
 	textarea {
+		background: transparent;
+		box-shadow: none;
+		border: 2px solid $secondary_light_75;
 		margin: 10px 0;
 		width: 100%;
 	}
