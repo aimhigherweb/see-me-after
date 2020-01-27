@@ -1,10 +1,17 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import Contact from '../components/contact'
+import About from '../components/about'
+import Testimonials from '../components/testimonials'
 
-import { testimonials } from '../data/testimonials'
+const testimonials = [
+	{
+		name: 'Amy',
+		company: 'AimHigher Web Design',
+		service: 'editing',
+		testimonial: 'Mandy did a fantastic job, she made my words sound good.',
+	},
+]
 
 export default class IndexPage extends React.Component {
 	render() {
@@ -18,25 +25,9 @@ export default class IndexPage extends React.Component {
 		return (
 			<Layout meta={meta}>
 				<div className="align">
-					<Img fixed={data.file.childImageSharp.fixed} />
-					<div>
-						<h2>About</h2>
-						<p>See Me After specialises in creating and editing content that still maintains your voice.</p>
-					</div>
+					<About {...data.file.childImageSharp.fixed} />
 				</div>
-				<div className="testimonials">
-					<h2 className="left">Testimonial</h2>
-					<blockquote className="testimonial">
-						{testimonials[0].testimonial}
-						<cite>
-							{testimonials[0].name} - {testimonials[0].company}
-						</cite>
-					</blockquote>
-				</div>
-				<div className="contact">
-					<h2 className="right">Contact</h2>
-					<Contact />
-				</div>
+				{/* <Testimonials quotes={testimonials} /> */}
 			</Layout>
 		)
 	}

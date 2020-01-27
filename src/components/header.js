@@ -1,22 +1,26 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Logo from '../img/logo.svg'
-
 import '../scss/partials/header.scss'
 
 const Header = () => {
 	const menu = [
+		// {
+		// 	slug: '/',
+		// 	title: 'Home',
+		// },
 		{
-			slug: '/about',
-			title: 'About',
+			slug: '/contact',
+			title: 'Contact',
 		},
 	]
 	return (
 		<header>
-			<Link to="/" className="site-logo">
-				<Logo />
-			</Link>
+			<h1>
+				<Link to="/" className="site-title">
+					See Me After
+				</Link>
+			</h1>
 
 			<nav>
 				<ul id="menu-main" className="menu">

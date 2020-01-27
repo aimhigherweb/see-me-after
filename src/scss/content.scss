@@ -2,7 +2,7 @@
 
 body {
 	color: $neutral;
-	font: $font_regular;
+	font-family: $font_regular;
 	font-size: 1.2em;
 	line-height: 1.4;
 	min-height: 100vh;
@@ -18,7 +18,8 @@ h1,
 h2,
 h3 {
 	color: $primary;
-	font: $font_headings;
+	font-family: $font_headings;
+	font-weight: normal;
 }
 
 h1 {
@@ -47,7 +48,6 @@ h3 {
 }
 
 p {
-	font-size: 1.2em;
 	line-height: 1.2;
 }
 
@@ -61,7 +61,7 @@ em {
 
 a {
 	color: $primary;
-	font: inherit;
+	font-family: inherit;
 
 	&:active,
 	&:hover,
@@ -100,15 +100,16 @@ hr {
 
 blockquote {
 	border-left: 5px solid $primary;
-	font: $font_headings;
+	font-family: $font_headings;
 	font-size: 1.2em;
 	font-weight: normal;
 	padding: 10px 20px;
+	margin: 10px 20px;
 
 	&.testimonial {
 		border: none;
 		display: inline;
-		font: $font_regular;
+		font-family: $font_regular;
 		font-size: 1.2em;
 		margin: 20px 0;
 		position: relative;
@@ -131,12 +132,28 @@ blockquote {
 			z-index: -2;
 		}
 	}
+
+	&.cta {
+		border-left: none;
+		line-height: 2;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		.cta {
+			display: inline;
+		}
+	}
+
+	@media (min-width: $tablet) {
+		margin: 20px 40px;
+	}
 }
 
 figure {
 	figcaption {
 		border-left: 5px solid $primary;
-		font: $font_headings;
+		font-family: $font_headings;
 		font-size: 0.8em;
 		font-weight: normal;
 		padding: 10px 0 10px 10px;
@@ -175,6 +192,18 @@ button,
 		background: #fff;
 		color: $secondary;
 	}
+
+	&.cta {
+		background: $primary;
+		border-color: $primary;
+		margin: 0;
+		text-decoration: none;
+
+		&:active, &:hover, &:focus {
+			background: #fff;
+			color: $primary;
+		}
+	}
 }
 
 .code {
@@ -193,7 +222,7 @@ pre {
 }
 
 main {
-	padding: 20px 10px;
+	padding: 20px 10px 30px;
 	margin: 0 auto;
 	width: 90vw;
 	max-width: 1200px;
@@ -207,19 +236,29 @@ main {
 
 .align {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
 	margin: -10px;
 
-	> * {
-		margin: 10px;
-		min-width: 200px;
-		width: 45%;
-	}
-
 	h2 {
+		order: -1;
 		text-align: left;
 		margin-top: 0;
+		width: 100%;
+	}
+
+	@media (min-width: $tablet) {
+		justify-content: space-between;
+
+		h2 {
+			order: 0;
+		}
+
+		> * {
+			margin: 10px;
+			min-width: 200px;
+			width: 45%;
+		}
 	}
 }
 

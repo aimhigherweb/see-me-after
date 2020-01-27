@@ -1,23 +1,30 @@
 //Fonts
 @font-face {
-	font-family: 'Antic Didone';
+	font-family: 'Source Sans Pro';
 	font-style: normal;
 	font-weight: 400;
-	src: url('../fonts/AnticDidone-Regular.ttf') format('truetype');
+	src: url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Hypatia Sans Pro';
-	font-style: normal;
+	font-family: 'Source Sans Pro';
+	font-style: italic;
 	font-weight: 400;
-	src: url('../fonts/HypatiaSansPro-Regular.otf') format('opentype');
+	src: url('../fonts/SourceSansPro-Italic.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Hypatia Sans Pro';
+	font-family: 'Source Sans Pro';
 	font-style: normal;
 	font-weight: 700;
-	src: url('../fonts/HypatiaSansPro-Bold.otf') format('opentype');
+	src: url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../fonts/SourceSansPro-BoldItalic.ttf') format('truetype');
 }
 
 // Imports
@@ -25,7 +32,7 @@
 
 * {
 	box-sizing: border-box;
-	font: $font-regular;
+	font-family: $font-regular;
 }
 
 img {
@@ -47,4 +54,13 @@ img {
 
 body {
 	font-size: 16px;
+}
+
+
+nav {
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
 }

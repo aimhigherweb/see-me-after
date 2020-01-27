@@ -7,7 +7,7 @@ footer {
 	align-items: center;
 	font-size: 15px;
 	height: auto;
-	min-height: $height_footer;
+
 	padding: 10px;
 	position: relative;
 	bottom: 0;
@@ -54,21 +54,39 @@ footer {
 	}
 
 	.aimhigher {
-		--secondary: #{$primary};
-		--primary: #{$primary};
+		--logo-gradient: #{$primary};
+		--logo-neutral: #{$primary};
+		--logo-secondary: #{$primary_light_50};
+
+		border: 3px solid transparent;
 		margin-right: 20px;
+		padding: 10px;
 
 		svg {
-			max-width: 200px;
+			max-width: 100px;
+
+			
+		}
+
+		@media(min-width: $desktop) {
+			padding: 20px;
+
+			svg {
+				max-width: 200px;
+			}
 		}
 	}
 
 	a {
+
 		&:active,
 		&:hover,
 		&:focus {
-			--secondary: #16a6b1;
-			--primary: #1c75bc;
+			border-color: $primary;
+
+			--logo-gradient: url(#LogoGradient);
+			--logo-neutral: #4c4d4e;
+			--logo-secondary: #00acbb;
 		}
 	}
 }

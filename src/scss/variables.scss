@@ -1,7 +1,7 @@
 //Fonts
-$font_regular: 400 1em 'Hypatia Sans Pro', serif;
-$font_bold: 700 1em 'Hypatia Sans Pro', serif;
-$font_headings: 700 1.5em 'Antic Didone', serif;
+$font_regular: 'Source Sans Pro', Arial, sans-serif;
+$font_bold: 'Source Sans Pro', Arial, sans-serif;
+$font_headings: 'Source Sans Pro', Arial, sans-serif;
 
 //Colours
 $primary: #c10000;
@@ -40,3 +40,5 @@ $neutral_light_90: #191919;
 // Variables
 $height_header: 14vh;
 $height_footer: 15vh;
+$tablet: 40rem;
+$desktop: 50rem;
