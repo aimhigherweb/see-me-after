@@ -232,6 +232,12 @@ main {
 		max-height: 400px;
 		max-width: 400px;
 	}
+
+
+	// TODO: This can probably go when testimonials are added as there'll be more gap then
+	@media (min-width: $desktop) {
+		padding-bottom: 100px;
+	}
 }
 
 .align {
