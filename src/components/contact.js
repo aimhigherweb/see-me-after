@@ -46,7 +46,7 @@ class ContactForm extends React.Component {
 				method="post"
 				action="/thanks/"
 				data-netlify="true"
-				data-netlify-recaptcha="true"
+				data-netlify-recaptcha="false"
 				data-netlify-honeypot="bot-field"
 				onSubmit={this.handleSubmit}
 			>
@@ -69,7 +69,6 @@ class ContactForm extends React.Component {
 					Message
 					<textarea name="message" onChange={this.handleChange} />
 				</label>
-				<Recaptcha ref="recaptcha" sitekey={recaptchaKey} onChange={this.handleRecaptcha} />
 				<button type="submit">Submit</button>
 			</form>
 		)
