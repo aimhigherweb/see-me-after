@@ -20,6 +20,7 @@ const Header = () => {
 				<Link to="/" className="site-title">
 					See Me After
 				</Link>
+				<span>Editing and Proofreading Services</span>
 			</h1>
 
 			<nav>

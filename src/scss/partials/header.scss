@@ -3,8 +3,17 @@
 header {
 	padding: 10px;
 
-	.site-title {
+	h1 {
 		font-weight: 500;
+
+		span {
+			display: block;
+			font-size: 0.7em;
+		}
+	}
+
+	.site-title {
+		
 		text-decoration: none;
 
 		&:active, &:hover, &:focus {
