@@ -2,7 +2,7 @@ import React from 'react'
 import { navigateTo } from 'gatsby'
 import Recaptcha from 'react-google-recaptcha'
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
+const recaptchaKey = process.env.GATSBY_RECAPTCHA_KEY
 
 function encode(data) {
 	return Object.keys(data)
@@ -69,7 +69,7 @@ class ContactForm extends React.Component {
 					Message
 					<textarea name="message" onChange={this.handleChange} />
 				</label>
-				<Recaptcha ref="recaptcha" sitekey={RECAPTCHA_KEY} onChange={this.handleRecaptcha} />
+				<Recaptcha ref="recaptcha" sitekey={recaptchaKey} onChange={this.handleRecaptcha} />
 				<button type="submit">Submit</button>
 			</form>
 		)
