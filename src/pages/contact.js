@@ -10,8 +10,6 @@ const Contact = () => (
 				site {
 					siteMetadata {
 						title
-						description
-						siteUrl
 					}
 				}
 			}
@@ -19,9 +17,8 @@ const Contact = () => (
 
 		render={data => {
 			const meta = {
-				name: data.site.siteMetadata.title,
-				description: data.site.siteMetadata.description,
-				slug: data.site.siteMetadata.siteUrl,
+				name: 'Contact',
+				slug: '/contact',
 			}
 
 			return (

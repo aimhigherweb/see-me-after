@@ -4,7 +4,7 @@ console.log(process.env.GATSBY_RECAPTCHA_KEY)
 
 module.exports = {
 	siteMetadata: {
-		title: 'See Me After',
+		title: 'See Me After - Editing and Proofreading Services',
 		description: 'See Me After Editing and Proofreading Services',
 		siteUrl: 'https://seemeafter.com',
 	},

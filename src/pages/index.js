@@ -17,7 +17,6 @@ export default class IndexPage extends React.Component {
 	render() {
 		const { data } = this.props,
 			meta = {
-				name: data.site.siteMetadata.title,
 				description: data.site.siteMetadata.description,
 				slug: data.site.siteMetadata.siteUrl,
 			}
