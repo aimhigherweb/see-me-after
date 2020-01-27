@@ -20,10 +20,6 @@ class ContactForm extends React.Component {
 		this.setState({ [e.target.name]: e.target.value })
 	}
 
-	handleRecaptcha = value => {
-		this.setState({ 'g-recaptcha-response': value })
-	}
-
 	handleSubmit = e => {
 		e.preventDefault()
 		const form = e.target
@@ -42,11 +38,10 @@ class ContactForm extends React.Component {
 	render() {
 		return (
 			<form
-				name="contact-recaptcha"
+				name="contact"
 				method="post"
 				action="/thanks/"
 				data-netlify="true"
-				data-netlify-recaptcha="false"
 				data-netlify-honeypot="bot-field"
 				onSubmit={this.handleSubmit}
 			>
