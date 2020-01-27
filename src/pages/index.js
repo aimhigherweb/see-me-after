@@ -1,17 +1,17 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import About from '../components/about'
-import Testimonials from '../components/testimonials'
+// import Testimonials from '../components/testimonials'
 
-const testimonials = [
-	{
-		name: 'Amy',
-		company: 'AimHigher Web Design',
-		service: 'editing',
-		testimonial: 'Mandy did a fantastic job, she made my words sound good.',
-	},
-]
+// const testimonials = [
+// 	{
+// 		name: 'Amy',
+// 		company: 'AimHigher Web Design',
+// 		service: 'editing',
+// 		testimonial: 'Mandy did a fantastic job, she made my words sound good.',
+// 	},
+// ]
 
 export default class IndexPage extends React.Component {
 	render() {

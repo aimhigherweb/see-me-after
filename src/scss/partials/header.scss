@@ -16,5 +16,9 @@ header {
 		display: flex;
 		justify-content: flex-end;
 		padding: 0 20px;
+
+		a.active {
+			text-decoration: none;
+		}
 	}
 }
